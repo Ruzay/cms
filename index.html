@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>CMS : Home</title>
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="img/logo.jpg" />
+    <!-- Font Awesome -->
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">    
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css"/> 
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.css" type="text/css" media="screen" /> 
+    <!-- Animate css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css"/> 
+    <!-- Progress bar  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-progressbar-3.3.4.css"/> 
+     <!-- Theme color -->
+    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+    <!-- Main Style -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+
+    <!-- Open Sans for body font -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Lato for Title -->
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>    
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  
+  <!-- BEGAIN PRELOADER -->
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+  <!-- END PRELOADER -->
+
+  <!-- SCROLL TOP BUTTON -->
+  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+  <!-- END SCROLL TOP BUTTON -->
+
+  <!-- Start header -->
+  <header id="header">
+    <!-- header top search -->
+   
+      <!-- I Remove search icon  -->
+    
+    <!-- header bottom -->
+    <div class="header-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="header-contact">
+              <ul>
+                <li>
+                  <div class="phone">
+                    <i class="fa fa-phone"></i>
+                    +268 76433428
+                  </div>
+                </li>
+                <li>
+                  <div class="mail">
+                    <i class="fa fa-envelope"></i>
+                    support@capitalmakerts.com
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="header-login">
+              <a class="login modal-form" data-target="#login-form" data-toggle="modal" href="#">Login / Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End header -->
+  
+  <!-- Start login modal window -->
+  <div aria-hidden="false" role="dialog" tabindex="-1" id="login-form" class="modal leread-modal fade in">
+    <div class="modal-dialog">
+      <!-- Start login section -->
+      <div id="login-content" class="modal-content">
+        <div class="modal-header">
+          <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title"><i class="fa fa-unlock-alt"></i>Login</h4>
+        </div>
+        <div class="modal-body">
+          <form method="post"  action="index.php"  >
+            <div class="form-group">
+              <input type="text" name="username" placeholder="User name" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" placeholder="Password" class="form-control">
+            </div>
+			 <div class="form-group">
+              <input type="text" name="church" placeholder="Church Code" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Login as</label>
+                <select class="form-control" style="width: 100%;" name="position">
+                  <option>Secretary</option>
+				  <option>Treasurer</option>
+				  <option>Admin</option>
+				 
+               </select>
+       </div>
+             <div class="loginbox">
+              <label><input type="checkbox"><span>Remember me</span></label>
+              <button class="btn signin-btn" name="btn_log" type="submit">SIGN IN</button>
+            </div>                    
+          </form>
+        </div>
+        <div class="modal-footer footer-box">
+          <a href="#">Forgot password ?</a>
+          <span>No account ? <a id="signup-btn" href="#">Sign Up.</a></span>            
+        </div>
+      </div>
+      <!-- Start signup section -->
+      <div id="signup-content" class="modal-content">
+        <div class="modal-header">
+          <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title"><i class="fa fa-lock"></i>Sign Up</h4>
+        </div>
+        <div class="modal-body">
+         <form method="post"  action="index.php"  >
+            <div class="form-group">
+              <input placeholder="Name" class="form-control">
+            </div>
+            <div class="form-group">
+              <input placeholder="Username" class="form-control">
+            </div>
+            <div class="form-group">
+              <input placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <div class="signupbox">
+              <span>Already got account? <a id="login-btn" href="#">Sign In.</a></span>
+            </div>
+            <div class="loginbox">
+              <label><input type="checkbox"><span>Remember me</span><i class="fa"></i></label>
+              <button class="btn signin-btn" name="btn_log" type="submit">SIGN UP</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End login modal window -->
+
+  <!-- BEGIN MENU -->
+  <section id="menu-area">      
+    <nav class="navbar navbar-default" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->              
+          <!-- TEXT BASED LOGO -->
+          <a class="navbar-brand" href="index.html">CMS</a>              
+          <!-- IMG BASED LOGO  -->
+           <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"></a> -->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="feature.html">Feature</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>                     
+        </div><!--/.nav-collapse -->
+        <a href="#" id="search-icon">
+          <i class="fa fa-search">            
+          </i>
+        </a>
+      </div>     
+    </nav>
+  </section>
+  <!-- END MENU --> 
+
+  <!-- Start slider -->
+  <section id="slider">
+    <div class="main-slider">
+      <div class="single-slide">
+        <img src="assets/images/c1.jpg" alt="img">
+        <div class="slide-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="slide-article">
+                  <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">Church Management Software</h1>
+                  <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s"> Manage your data & store your document digital</p>
+                  <a class="read-more-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" href="#">Read More</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="slider-img wow fadeInUp">
+                  <img src="" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-slide">
+        <img src="assets/images/c2.jpg" alt="img">
+        <div class="slide-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-6">
+                <div class="slide-article">
+                  <h1 class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">We are the Best Team to Support you always</h1>
+                  <p class="wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.75s"> 24/7 service </p>
+                  <a class="read-more-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s" href="#">Read More</a>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="slider-img wow fadeInUp">
+                  <img src="" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>          
+    </div>
+  </section>
+  <!-- End slider -->
+
+  <!-- Start Feature -->
+  <section id="feature">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-area">
+            <h2 class="title">Features</h2>
+            <span class="line"></span>
+            <p>The Church Management Systems have vital features which you can use to organise your church data in a very organised manner and also help you present accurate reports.</p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="feature-content">
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <div class="single-feature wow zoomIn">
+                  <i class="fa fa-leaf feature-icon"></i>
+                  <h4 class="feat-title">Secretary platform</h4>
+                  <p>Used by church secretery. Register, edit and delete church members information( Church Membership Forms). Assign(AVED) members positions. Add(AVED) Church commitees. Add(Upload) church minutes. Check Church Stacs.Birthday Notifier. Add(AVED) year plan. </p>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <div class="single-feature wow zoomIn">
+                  <i class="fa fa-mobile feature-icon"></i>
+                  <h4 class="feat-title">Treasure platform</h4>
+                  <p>Used by treasure. View monetary value of Assets, Tithes , Income and Expenditures. Register(AVED) Church assets. Add(AVED) Income(Tithes, Freewill. etc). Add(AVED) expenditures. Add(AVED) Year Budget Plan. Check Money Usage and balances. View Statements.</p>
+                </div>
+              </div>
+              
+              <div class="col-md-4 col-sm-6">
+                <div class="single-feature wow zoomIn">
+                  <i class="fa fa-smile-o feature-icon"></i>
+                  <h4 class="feat-title">Detailed Reports</h4>
+                  <p>On Treasures"s platform. Provides printable reports. Yearly Recap Reports on dashboard (graph - income by expenditure). Yearly Balances, Monthly balances, daily balances, Income balances, Expenses balance and printable Yearly budgets. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Feature -->
+
+  <!-- Start about  -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-area">
+            <h2 class="title">About us</h2>
+            <span class="line"></span>
+            <p>Church Management System is a church management platform developed by experienced and professional developers who  are also Christians. It provides suitable features which are usable to insert, manage, process data and produce detailed reports.</p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="about-content">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="our-skill">
+                  <h3>Our Website</h3>                  
+                  <div class="our-skill-content">
+                  <p>The Best Website Layouts for User Experience and Conversions CMS contains:</p>
+                    <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="100">
+                        <span class="progress-title">Simple to Use</span>
+                      </div>
+                  </div>
+                  <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="85">
+                        <span class="progress-title">Intuitive</span>
+                      </div>
+                  </div>
+                  <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="70">
+                        <span class="progress-title">Responsive</span>
+                      </div>
+                  </div>
+                 
+                  <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="75">
+                        <span class="progress-title">Goal Oriented</span>
+                      </div>
+                  </div>
+                   <div class="progress">
+                      <div class="progress-bar six-sec-ease-in-out" role="progressbar" data-transitiongoal="5">
+                        <span class="progress-title">Need technical experience </span>
+                      </div>
+                  </div>
+                  </div>                  
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="why-choose-us">
+                  <h3>Why Choose Us?</h3>
+                  <div class="panel-group why-choose-group" id="accordion">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            Automated data management <span class="fa fa-minus-square"></span>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                        <img class="why-choose-img" src="assets/images/nasty pics.png" alt="img">
+                         <p> Imagine the information redundecy that can be caused by this disorganised documents(picture) . You should see this inside your mind. 
+                         CMS system have come to give a peace of mind on the capturing of data using papers and books which later will have a challenge of storing.
+                         But instead it has introduced an electronical way of capturing data, easy proccessing outputing rich information. 
+                         CMS is hand holding you to your first world status on information management.  </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default ">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            Electronical Reports <span class="fa fa-plus-square"></span>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                         <p> The end of the year, month or week have been a headache to many due to reports they have to produce.
+                         Imagine having a system that produce for you those reports. Not producing it at the end of that reports deadline but a readily available reports that can be used at any time.
+                         That what's CMS have come to introduce, readily reports. </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                         Readily accessable information <span class="fa fa-plus-square"></span>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p> That moment you want see something about the church then you have to travel to get the 
+                          secretary or treasure for that information it lead to waste of a lot of resources. But compare it with CMS where you just use your phone to log anywhere
+                          to view that information. It will serve both time and resources.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about -->
+
+ 
+  <!-- Start Service -->
+  <section id="service">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-area">
+            <h2 class="title">Our Services</h2>
+            <span class="line"></span>
+            <p> Church Management System provides services which are capable to transform the management of data at churches.</p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="service-content">
+            <div class="row">
+              <!-- Start single service -->
+              <div class="col-md-4 col-sm-6">
+                <div class="single-service wow zoomIn">
+                  <i class="fa fa-desktop service-icon"></i>
+                  <h4 class="service-title">Electronic Storage</h4>
+                  <p>CMS provides secure, reliable and speedy access to data and information.</p>
+                </div>
+              </div>
+              <!-- End single service -->
+              <!-- Start single service -->
+              <div class="col-md-4 col-sm-6">
+                <div class="single-service wow zoomIn">
+                  <i class="fa fa-paw service-icon"></i>
+                  <h4 class="service-title">Information accurance</h4>
+                  <p>CMS have been deloped in way to practice assuring information and managing risks on information. 
+                </p>
+                </div>
+              </div>
+              <!-- End single service -->
+              <!-- Start single service -->
+              <div class="col-md-4 col-sm-6">
+                <div class="single-service wow zoomIn">
+                  <i class="fa fa-magic service-icon"></i>
+                  <h4 class="service-title">Marketing</h4>
+                  <p>There are many advertising and marketing platforms that will be available on the site as soon as more churches to join.</p>
+                </div>
+              </div>
+              <!-- End single service -->
+              <!-- Start single service -->
+              <div class="col-md-4 col-sm-6">
+                <div class="single-service wow zoomIn">
+                  <i class="fa fa-shopping-cart service-icon"></i>
+                  <h4 class="service-title">Fast Data proccessing. </h4>
+                  <p>CMS provides accurate and fast data proccessing. Just by inserting certain digits the system itself can do the calculations and provide answers.</p>
+                </div>
+              </div>
+              <!-- End single service -->
+              <!-- Start single service -->
+              <div class="col-md-4 col-sm-6">
+                <div class="single-service wow zoomIn">
+                  <i class="fa fa-mobile service-icon"></i>
+                  <h4 class="service-title">Email Services.</h4>
+                  <p>Emails provides a intuitive, efficient, and useful way of storing and managing data electronical. CMS provides emailing features that anable you to share information to anyone.</p>
+                </div>
+              </div>
+              <!-- End single service -->
+              <!-- Start single service -->
+              <div class="col-md-4 col-sm-6">
+                <div class="single-service wow zoomIn">
+                  <i class="fa fa-rocket service-icon"></i>
+                  <h4 class="service-title">Spiritual Assistance</h4>
+                  <p>CMS is connected to other Christian instutions and believers who can help aid you on any spiritual youe may need. Personal or Church wise .</p>
+                </div>
+              </div>
+              <!-- End single service -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Service -->
+
+  <!-- Start Pricing table -->
+  <section id="pricing-table">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-area">
+            <h2 class="title">Our Pricing Tables</h2>
+            <span class="line"></span>
+            <p>Our prices are low and affordable. Choose (Click Purchase) the best package suitable for your church and enjoy the System Features.</p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="pricing-table-content">
+            <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-table-price wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                  <div class="price-header">
+                    <span class="price-title">Basic</span>
+                    <div class="price">
+                      <sup class="price-up">E</sup>
+                       600
+                      <span class="price-down">1/2 yr</span>
+                    </div>
+                  </div>
+                  <div class="price-article">
+                    <ul>
+                      <li>Reg Fee E250</li>
+                      <li>200 Members</li>
+                      <li>Data Storage</li>
+                      <li>1 Emails</li>
+                      <li>6 Months</li>
+                    </ul>
+                  </div>
+                  <div class="price-footer">
+                    <a class="purchase-btn" href="#">Purchase</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-table-price wow fadeInUp" data-wow-duration="0.75s" data-wow-delay="0.75s">
+                  <div class="price-header">
+                    <span class="price-title">Advanced</span>
+                    <div class="price">
+                      <sup class="price-up">E</sup>
+                      1000
+                      <span class="price-down">1yr</span>
+                    </div>
+                  </div>
+                  <div class="price-article">
+                    <ul>
+                    <li>Reg Fee E250</li>
+                      <li>200 Members</li>
+                      <li>Data Storage</li>
+                      <li>1 Emails</li>
+                      <li>12 Months</li>
+                    </ul>
+                  </div>
+                  <div class="price-footer">
+                    <a class="purchase-btn" href="#">Purchase</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-table-price featured-price wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                  <div class="price-header">
+                    <span class="price-title">Professional</span>
+                    <div class="price">
+                      <sup class="price-up">E</sup>
+                      1800
+                      <span class="price-down">2yrs</span>
+                    </div>
+                  </div>
+                  <div class="price-article">
+                    <ul>
+                      <li>Reg Fee E250</li>
+                      <li>200 Members</li>
+                      <li>Data Storage</li>
+                      <li>1 Emails</li>
+                      <li>24 Months</li>
+                    </ul>
+                  </div>
+                  <div class="price-footer">
+                    <a class="purchase-btn" href="#">Purchase</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="single-table-price wow fadeInUp" data-wow-duration="1.15s" data-wow-delay="1.15s">
+                  <div class="price-header">
+                    <span class="price-title">Additional</span>
+                    <div class="price">
+                      <sup class="price-up">E</sup>
+                      E50
+                      <span class="price-down">/mo</span>
+                    </div>
+                  </div>
+                  <div class="price-article">
+                    <ul>
+                    
+                      <li>200+ Members</li>
+                      <li>Data Storage</li>
+                      <li>3 Emails</li>
+                      <li>web page</li>
+                    </ul>
+                  </div>
+                  <div class="price-footer">
+                    <a class="purchase-btn" href="#">Purchase</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Pricing table -->  
+
+ 
+  
+  <!-- Start Testimonial section -->
+  <section id="testimonial">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="title-area">
+                <h2 class="title">Whats Client Say</h2>
+                <span class="line"></span>           
+              </div>
+            </div>
+            <div class="col-md-12">
+              <!-- Start testimonial slider -->
+              <div class="testimonial-slider">
+                <!-- Start single slider -->
+                <div class="single-slider">
+                  <div class="testimonial-img">
+                    <img src="assets/images/testi1.jpg" alt="testimonial image">
+                  </div>
+                  <div class="testimonial-content">
+                    <p> A very user friendly system it is just a subtitution of paper work i have been doing but coming with more interesting features. 
+                    I am so much grateful  CMS technoligies about product. surely we are going to 2022 as churches with such products.</p>
+                    <h6>Ruzavelt Matse, <span>secretery</span></h6>
+                  </div>
+                </div>
+                <!-- Start single slider -->
+                <div class="single-slider">
+                  <div class="testimonial-img">
+                    <img src="assets/images/testi3.jpg" alt="testimonial image">
+                  </div>
+                  <div class="testimonial-content">
+                    <p>It has maked my work much easier now. Reports and balances i took time to create before, now can be proccessed just in a minute. It is something
+                    we have been lacking as a church. I would like to encourage more churches to try it.</p>
+                    <h6>Buhle Zwane, <span>Treasure</span></h6>
+                  </div>
+                </div>
+                <!-- Start single slider -->
+                <div class="single-slider">
+                  <div class="testimonial-img">
+                    <img src="assets/images/testi2.jpg" alt="testimonial image">
+                  </div>
+                  <div class="testimonial-content">
+                    <p> A very user friendly system it is just a subtitution of paper work i have been doing but coming with more interesting features. 
+                    I am so much grateful  CMS technoligies about product. surely we are going to 2022 as churches with such products.</p>
+                    <h6>Ruzavelt Matse, <span>secretery</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6"></div>        
+      </div>
+    </div>
+  </section>
+  <!-- End Testimonial section -->
+
+  <!-- Start subscribe us -->
+  <section id="subscribe">
+    <div class="subscribe-overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="subscribe-area">
+              <h2 class="wow fadeInUp">Subscribe Newsletter</h2>
+              <form action="" class="subscrib-form wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                <input type="text" placeholder="Enter Your E-mail..">
+                <button class="subscribe-btn" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End subscribe us -->
+
+  <!-- Start footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="footer-left">
+            <p>Designed by <a href="http://www.markups.io/">CMS Technologies</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div class="footer-right">
+            <a href="index.html"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End footer -->
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- Bootstrap -->
+  <script src="assets/js/bootstrap.js"></script>
+  <!-- Slick Slider -->
+  <script type="text/javascript" src="assets/js/slick.js"></script>    
+  <!-- mixit slider -->
+  <script type="text/javascript" src="assets/js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
+ <!-- counter -->
+  <script src="assets/js/waypoints.js"></script>
+  <script src="assets/js/jquery.counterup.js"></script>
+  <!-- Wow animation -->
+  <script type="text/javascript" src="assets/js/wow.js"></script> 
+  <!-- progress bar   -->
+  <script type="text/javascript" src="assets/js/bootstrap-progressbar.js"></script>  
+  
+ 
+  <!-- Custom js -->
+  <script type="text/javascript" src="assets/js/custom.js"></script>
+  
+  </body>
+</html>
